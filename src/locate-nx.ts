@@ -9,7 +9,7 @@ interface PackageJsonLike {
 
 async function loadPackageJson(): Promise<PackageJsonLike> {
   return JSON.parse(
-    await fsPromises.readFile('package.json', 'utf8'),
+    await fsPromises.readFile('webapp/package.json', 'utf8'),
   ) as PackageJsonLike;
 }
 
